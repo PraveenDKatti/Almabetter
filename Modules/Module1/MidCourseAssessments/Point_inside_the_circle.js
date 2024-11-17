@@ -15,3 +15,22 @@ The distance between the point (2, 2) and the circle's center (0, 0) is less tha
 Therefore, the point lies strictly inside the circle. */
 
 
+// Do not remove nor make any changes in  main() function
+function main() {
+	/*Input:
+	Center of the circle (x, y)
+	Radius of circle: r
+	Point inside a circle (a, b) */
+    var x = parseInt(readLine());
+    var y = parseInt(readLine());
+    var r = parseInt(readLine());
+    var a = parseInt(readLine());
+    var b = parseInt(readLine());
+    console.log(check_a_point(a, b, x, y, r));
+}
+function check_a_point(a, b, x, y, r) {
+    // Your code goes here
+    let p = (a-x)**2+(b-y)**2
+    let c = r**2
+    return p<=c?true:false
+}
