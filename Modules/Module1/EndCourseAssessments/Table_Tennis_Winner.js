@@ -15,3 +15,21 @@ Explanation:
 Both players reach 10 points each. Opponent scores the final point, gaining a 2-point lead. */
 
 
+// Do not remove nor make any changes in  main() function
+function main() {
+    var s = parseInt(readLine()).toString()
+    console.log(winorlose(s));
+}
+function winorlose(s){
+    // Your code goes here
+    let arsh = 0
+    let opp = 0
+    let i = 0
+    while(i<s.length){
+        s[i]==1?arsh++:opp++
+        if(arsh==10&&opp==10)
+            return s[i]==1?"WIN":"LOSE"
+        i++
+    }
+    return arsh>opp?"WIN":"LOSE"
+}
