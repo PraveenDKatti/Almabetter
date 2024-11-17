@@ -19,3 +19,16 @@ For s = "abcd", the left shift yields "bcda" and the right shift yields "dabc", 
 Thus, there is no V for which both shifts yield S.
  */
 
+// Do not remove nor make any changes in  main() function
+function main() {
+    var s = readLine();
+    console.log((lShift(s) === rShift(s)) ? 'YES' : 'NO');
+}
+function lShift(s) {
+    // Your code goes here
+    return s.substr(1)+s.charAt(0)
+}
+function rShift(s) {
+    // Your code goes here
+    return s.charAt(s.length-1)+s.substr(0,s.length-1)
+}
