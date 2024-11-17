@@ -12,3 +12,31 @@ Output:
 Explanation:
 The only triangle possible is formed by using lengths 3, 4, and 5. */
 
+
+// Do not remove nor make any changes in  main() function
+function main() {
+    var arr = readLine().split(" ").map(x => parseInt(x));
+    var n = parseInt(readLine());
+    console.log(findNumberOfTriangles(arr, n));
+}
+
+function findNumberOfTriangles(arr, n) {
+    // Your code goes here
+    arr.sort((a, b) => a - b);
+    let count = 0;
+
+    for (let i = 0; i < n - 2; i++) {
+        let k = i + 2;
+        
+        for (let j = i + 1; j < n; j++) {
+            while (k < n && arr[i] + arr[j] > arr[k]) {
+                k++;
+            }
+
+            if (k > j) {
+                count += k - j - 1;
+            }
+        }
+    }
+    return count;
+}
