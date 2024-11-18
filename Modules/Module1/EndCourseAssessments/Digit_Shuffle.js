@@ -10,3 +10,15 @@ true
 
 Explanation:
 The digits can be rearranged to form 180, which is a multiple of 5. */
+
+
+// Do not remove nor make any changes in  main() function
+function main() {
+    var n = parseInt(readLine());
+    console.log(isMultipleOfFive(n));
+}
+function isMultipleOfFive(n) {
+    // Your code goes here
+    let digits = n.toString().split("");
+    return digits.includes("0")||digits.includes("5")
+}
