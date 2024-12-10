@@ -13,3 +13,24 @@ Explanation:
 The only common string is "Shogun". */
 
 
+var findRestaurant = function(list1, list2) {
+    // Your code goes here
+    let map = new Map()
+    let dishes = []
+    let min = Infinity
+    list2.forEach((v,i)=>map.set(v,i))
+  
+    for(let i=0;i<list1.length; i++){
+      let dish = list1[i]
+      if(map.has(dish)){
+          let sum = map.get(dish)+i
+          if(sum < min){
+              min = sum
+              dishes = [dish]
+          }else if(sum === min){
+              dishes.push(dish)
+          }
+      }
+    }
+    return dishes
+  };
