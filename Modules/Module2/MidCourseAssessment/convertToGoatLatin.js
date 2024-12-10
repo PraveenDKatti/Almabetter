@@ -19,3 +19,17 @@ Explanation:
 "Latin" starts with a consonant → "atinLma" */
 
 
+var toGoatLatin = function(sentence) {
+    // Your code goes here
+    let words = sentence.split(" ")
+    const vowels = /[aeiou]/i
+
+    for(let i=0; i<words.length;i++ ){
+        let word = words[i]
+        if(!vowels.test(word[0])){
+            words[i] = word.slice(1)+word[0]
+        }
+        words[i] += 'ma'+'a'.repeat(i + 1);
+    }
+    return words.join(" ")
+};
