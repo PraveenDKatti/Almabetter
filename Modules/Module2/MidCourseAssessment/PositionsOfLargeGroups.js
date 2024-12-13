@@ -11,3 +11,20 @@ Output:
 Explanation:
 The large groups are "ddd", "eeee", and "bbb". */
 
+function largeGroupPositions(s) {
+    // Your code goes here
+    let largeGroup = []
+    let start = 0
+    for(let i=1;i<s.length;i++){
+        if(s[start] !== s[i]){
+            if(i-start >= 3){
+                largeGroup.push([start,i-1])
+            }
+            start = i
+        }
+    }
+    if (s.length - start >= 3) {
+        largeGroup.push([start, s.length - 1]);
+    }
+    return largeGroup
+};
