@@ -12,3 +12,23 @@ Explanation:
 The second row is 01, so the first symbol is 0.
 row 1: 0 row 2: 01 */
 
+
+var kthGrammar = function(n, k) {
+    // Your code goes here
+   let row = "0"
+   let temp = ""
+   let i=0
+   while(n>1){
+       for(let i=0;i<row.length;i++){
+           if(row[i]=="0")
+               temp += "01"
+           else
+                temp += "10"
+       }
+    n--
+    i++
+    row = temp
+    temp = ""
+    }
+    return row[k-1]
+};
