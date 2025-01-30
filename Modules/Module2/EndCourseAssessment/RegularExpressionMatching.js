@@ -13,3 +13,9 @@ Explanation:
 '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa". */
 
 
+var isMatch = function(s, p) {
+    // Your code goes here
+    let regexp = new RegExp(`${p}`,'g')
+    let matches = s.match(regexp)
+    return s == matches[0]
+};
