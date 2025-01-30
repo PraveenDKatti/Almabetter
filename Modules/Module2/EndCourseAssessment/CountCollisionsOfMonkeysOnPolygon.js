@@ -17,3 +17,8 @@ Monkey 1 moves in an anticlockwise direction; monkey 2 moves in an anticlockwise
 monkey 3 moves in a clockwise direction. Monkeys 1 and 3 collide. 
 It can be shown 6 total movements result in a collision. */
 
+var monkeyMove = function(n) {
+    //Your code goes here
+    if(n<3) return 0
+    return Math.pow(2,n)-2
+};
