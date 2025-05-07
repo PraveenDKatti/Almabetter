@@ -84,7 +84,6 @@ nav ul li a:hover {
 
 section {
   width: 100%;
-  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,12 +170,13 @@ section h2 {
 /* Portfolio */
 #portfolio .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 1rem;
 }
 
 .project-card {
+  text-align: center;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -189,7 +189,8 @@ section h2 {
 }
 
 .project-card img {
-  width: 100%;
+  width: auto;
+  height: 100px;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -226,6 +227,21 @@ section h2 {
 }
 
 /* Contact */
+.contact{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;  
+}
+
+.socials{
+  text-align: center;
+}
+
+.socials a{
+  padding: 5px;
+}
+
 .contact-form {
   background: white;
   width: 100%;
